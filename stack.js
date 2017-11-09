@@ -50,7 +50,9 @@ Stack.prototype.push = function(val){
 }
 
 Stack.prototype.pop = function() {
-   var val = delete this.storage[this.counter]
+  var val = this.storage[this.counter];
+  delete this.storage[this.counter];
+  this.counter--;
    return val
 }
 
