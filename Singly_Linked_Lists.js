@@ -44,22 +44,31 @@ class SinglyLinkedLists{
     }
     //method pop removes from the end of linked lists 
     pop(){
-        //if the SLL is empty 
-        if(this.lenght === 0){
-            return undefined
+        //if the singly linked list is empty
+        if(!this.head) return undefined;
+        //current head
+        let current = this.head
+        //give the new tail initla value
+        let newTail = current
+        //while loop to loop through the singly linked list:
+        while(current.next){
+            newTail = current
+            current = current.next
         }
-        // if SLL wasnt empty
-        // remember nextNode for the tail is null and thats the stopping condition
-        let nextNode = this.head.next;
-        let previousNode = this.head
-        console.log(nextNode, previousNode)
-        while(nextNode){
-            previousNode = nextNode
-            nextNode = nextNode.next
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--
+        if(this.length === 0){
+            this.head = null
+            this.tail = null
         }
-        console.log(previousNode, nextNode)
-        let popValue = this.tail.value; 
-        this.tail = previousNode
-        return popValue
+        return current;
     }
 }
+
+let sll1 = new SinglyLinkedLists()
+sll1.push(1)
+sll1.push(2)
+sll1.push(3)
+sll1.push(4)
+sll1.pop()
