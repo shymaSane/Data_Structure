@@ -105,6 +105,22 @@ class SinglyLinkedLists{
         }
         return current 
     }
+    //changes the value of node base on its position
+    set(index, newVal){
+        if(index < 1 || index > this.length){
+            return null
+        }
+        let current = this.head
+        for(let i = 1; i < index; i++){
+            current = current.next
+        }
+        current.val = newVal
+        return current 
+    }
+    //add nodes at specific position 
+    insert(index, val){
+        // TODO
+    }
 }
 
 let sll1 = new SinglyLinkedLists()
