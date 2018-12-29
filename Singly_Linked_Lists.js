@@ -64,6 +64,23 @@ class SinglyLinkedLists{
         }
         return current;
     }
+
+    //remove the head 
+    shift(){
+        //what happens when remving the head 
+        //next node becomes the head
+        if(this.length === 0) {
+            return undefined
+        }
+        let current = this.head;
+        let nextNode = this.head.next;
+        this.head = nextNode;
+        if(this.length === 1){
+            this.tail = nextNode
+        }
+        this.length--;
+        return current
+    }
 }
 
 let sll1 = new SinglyLinkedLists()
