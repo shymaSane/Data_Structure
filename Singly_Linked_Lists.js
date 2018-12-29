@@ -65,7 +65,7 @@ class SinglyLinkedLists{
         return current;
     }
 
-    //remove the head 
+    //removes the head 
     shift(){
         //what happens when remving the head 
         //next node becomes the head
@@ -80,6 +80,18 @@ class SinglyLinkedLists{
         }
         this.length--;
         return current
+    }
+    //adds new node to the beggining
+    unShift(val){
+        let node = new Node(val)
+        if(!this.head){
+            this.head = node
+            this.tail = node
+        }
+        let nextNode = this.head
+        this.head = node;
+        this.head.next = nextNode;
+        this.length++;
     }
 }
 
