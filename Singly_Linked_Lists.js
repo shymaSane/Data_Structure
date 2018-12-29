@@ -107,15 +107,11 @@ class SinglyLinkedLists{
     }
     //changes the value of node base on its position
     set(index, newVal){
-        if(index < 1 || index > this.length){
-            return null
+        let foundValue = this.get(index)
+        if(foundValue){
+            foundValue.val = newVal
         }
-        let current = this.head
-        for(let i = 1; i < index; i++){
-            current = current.next
-        }
-        current.val = newVal
-        return current 
+        return foundValue 
     }
     //add nodes at specific position 
     insert(index, val){
