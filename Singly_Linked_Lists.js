@@ -92,6 +92,18 @@ class SinglyLinkedLists{
         this.head = node;
         this.head.next = nextNode;
         this.length++;
+        return this;
+    }
+    //takes number or position and return the node in that position
+    get(index){
+        if(index < 1 || index > this.length){
+            return null
+        }
+        let current = this.head
+        for(let i = 1; i < index; i++){
+            current = current.next
+        }
+        return current 
     }
 }
 
