@@ -115,7 +115,17 @@ class SinglyLinkedLists{
     }
     //add nodes at specific position 
     insert(index, val){
-        // TODO
+        //when insert it ll take the current position
+        //the previous node tail ll point to it
+        //the current node tai
+        let foundValue = this.get(index)
+        if(foundValue){
+            let node = new Node(val)
+            let current = foundValue
+            let previousNode = this.get(index-1)
+            
+        }
+        return foundValue 
     }
 }
 
