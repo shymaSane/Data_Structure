@@ -1,0 +1,3 @@
+1- Selection, Bubble and Insertion sort are not effcient
+    A- selection sort: find the smallest value in array from positions i to array length-1,
+    Exchange the smallest value with the value at position i
