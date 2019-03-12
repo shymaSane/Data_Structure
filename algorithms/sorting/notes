@@ -1,3 +1,5 @@
 1- Selection, Bubble and Insertion sort are not effcient
     A- selection sort: find the smallest value in array from positions i to array length-1,
-    Exchange the smallest value with the value at position i
+    Exchange the smallest value with the value at position i.
+    B- bubble sort: items gradually bubble up to the top of array as the sorting happens,
+    look through the list, compare each pare of adjacent items and swap them if they are in the wrong position untill no swaps needed, in other words getting the large value t the top of list first

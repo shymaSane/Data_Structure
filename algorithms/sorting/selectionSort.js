@@ -4,15 +4,15 @@
 
 //l=0  is the postion where we want to start search
 const selectionSort = (arr, l=0) => {
-            let min = arr[l];
+            min = l;
             for (let i = l+1; i < arr.length; i++) {
-                if(arr[i] < min) {
-                   min = arr[i]
-                   arr[i] = arr[l]
+                if(arr[i] < arr[min]) {
+                    min = i
                 }
             }
-
-            if(l < arr.lenght){
+            if(l < arr.length-1){
+                [arr[min], arr[l]] = [arr[l], arr[min]]
+                console.log(x)
                 l += 1
                 selectionSort(arr, l)
             }
