@@ -7,6 +7,7 @@ const insertionSort = (arr, l = 1) =>{
 
     if(l < arr.length){
         l += 1;
+        console.log(arr)
         insertionSort(arr, l)
     }
     return arr
