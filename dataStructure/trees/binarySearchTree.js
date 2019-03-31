@@ -53,4 +53,25 @@ class BinarySearchTree{
         
         
     }
+    //find node
+    find(value){
+        //if there is no nodes
+        if(this.root === null) return false
+        //search value 
+        let current = this.root;
+        let found = false;
+        while(current && !found){
+            if (value === current.value){
+                found = true 
+                return true
+            } else {
+                if(value > current.value){
+                    current = current.right
+                } else {
+                    current = current.left
+                }
+            }
+        }
+        return false;
+    }
 } 
