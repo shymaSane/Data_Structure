@@ -1,3 +1,5 @@
+//FIFO
+
 class Queue {
     constructor(){
         this.storage = {};

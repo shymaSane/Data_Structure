@@ -1,0 +1,11 @@
+consists on Nodes in a parent, child relationship
+lists are linear
+trees are non-linear
+singly linked list can be a special path for tree
+nodes only can refrence nodes that below them
+you need to have one entry point 
+vocabs:   1- root: the top node in a tree
+         2- child:  a node connecting to another node when moving                    away from the Root.
+         3-  parent: the converse notion of a child
+         4- leaf: a node with no children 
+         5- edge:  the connection between two nodes(the arrow)           

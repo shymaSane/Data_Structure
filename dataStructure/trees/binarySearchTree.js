@@ -8,7 +8,7 @@ class Node {
         this.left = null;
         this.right = null
     }
-}
+} 
 
 class BinarySearchTree{
     constructor(){
@@ -73,5 +73,25 @@ class BinarySearchTree{
             }
         }
         return false;
+    }
+    //breadth first search
+    BFS(){
+        //data for final results, queue for breadth
+        let data = [],
+            queue = [];
+        if (this.root === null) return false;
+        //search
+        else{
+            let currentVal = this.root
+            queue.push(currentVal)
+            //for loop is to dequeue or queue
+            while(queue.length != 0){
+                let node = queue.shift()
+                data.push(node.value)
+                if(node.right) queue.push(node.right)
+                if(node.left) queue.push(node.left)
+            }
+            return data
+        }
     }
 } 
